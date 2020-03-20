@@ -1,0 +1,43 @@
+
+<h1 class="text-center text-success">Product Manager</h1>
+<table class="table text-center">
+	<thead class="thead-dark">
+		<tr>
+			<th scope="col">ID</th>
+			<th scope="col">Name</th>
+			<th scope="col">Price</th>
+			<th scope="col">Action</th>
+		</tr>
+	</thead>
+	<tbody *ngFor="let product of products">
+		<tr>
+			<th scope="row">{{product.id}}</th>
+			<td>{{product.name}}</td>
+			<td>${{product.price}}</td>
+			<td>
+        <button class="btn btn-outline-primary btn-lg" (click)="detailProduct(product)">Detail</button>&nbsp;
+				<button class="btn btn-outline-danger btn-lg" (click)="removeItem(product.id)">Delete</button>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<hr color="black" /><br />
+<div class="row" *ngIf="selected">
+	<div class="col-lg-2 col-md-0 mb-2"></div>
+	<div class="col-lg-8 col-md-12 mb-8">
+		<div class="card text-center">
+			<div class="card-header">
+				<h3>Product Detail</h3>
+        <a href="#"><img src="https://dummyimage.com/375x175/000/fff" alt=""></a>
+			</div>
+			<div class="card-body">
+        {{selected.desc}}
+        <br/>
+				{{selected.detail}}
+			</div>
+			<div class="card-footer">
+			</div>
+		</div>
+	</div>
+	<div class="col-lg-2 col-md-0 mb-2"></div>
+</div>
