@@ -24,8 +24,6 @@ export class ProductManagerComponent implements OnInit {
     this.products = this.products.filter(x => x.id !== id);
     console.log(this.selected.id);
     console.log(id);
-    if(id==this.selected.id){
-      this.selected = null;
-    }
+
   }
 }
