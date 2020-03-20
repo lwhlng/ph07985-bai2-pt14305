@@ -21,8 +21,6 @@ export class ProductManagerComponent implements OnInit {
   }
   removeItem(id) {
     this.products = this.products.filter(x => x.id !== id);
-    console.log(this.selected.id);
-    console.log(id);
-    
+    console.log(id); 
   }
 }
