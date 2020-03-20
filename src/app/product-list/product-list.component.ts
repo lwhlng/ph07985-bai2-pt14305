@@ -16,16 +16,4 @@ export class ProductListComponent implements OnInit {
   ngOnInit(): void {
     console.log(this.selected);
   }
-  detailProduct(product){
-    this.selected = product;
-    console.log(this.selected);
-  }
-  removeItem(id){
-    this.products = this.products.filter(x => x.id !== id);
-    console.log(this.selected.id);
-    console.log(id);
-    if(id==this.selected.id){
-      this.selected = null;
-    }
-  }
 }
